@@ -10,5 +10,10 @@ public class Game
 	{
 		
 	}
+	
+	public void changeState()
+	{
+		
+	}
 
 }
