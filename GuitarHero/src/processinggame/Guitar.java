@@ -1,5 +1,6 @@
 package processinggame;
 
-public class Guitar {
+public class Guitar 
+{
 
 }

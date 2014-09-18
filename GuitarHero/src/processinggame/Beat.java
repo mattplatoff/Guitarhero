@@ -1,5 +1,6 @@
 package processinggame;
 
-public class Beat {
+public class Beat 
+{
 
 }

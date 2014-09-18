@@ -1,5 +1,6 @@
 package processinggame;
 
-public class BeatHandler {
+public class BeatHandler 
+{
 
 }

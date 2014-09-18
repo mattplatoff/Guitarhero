@@ -1,5 +1,6 @@
 package processinggame;
 
-public class GuitarHeroGui {
+public class GuitarHeroGui 
+{
 
 }

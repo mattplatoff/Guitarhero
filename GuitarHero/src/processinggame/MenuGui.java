@@ -1,5 +1,6 @@
 package processinggame;
 
-public class MenuGui {
+public class MenuGui 
+{
 
 }
