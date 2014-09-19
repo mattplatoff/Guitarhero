@@ -3,19 +3,33 @@ package processinggame;
 public class Beat 
 {
 	private int time;
-	private int note;
+	private int position; //1, 2 or 3 (left, down or right)
 	
+	/**
+	 * Default Constructor for Beat
+	 * @param position - position 1, 2 or 3 on the guitar
+	 * @param time - the time of the beat
+	 */
+	public Beat (int position, int time)
+	{
+		
+	}
+	
+	/**
+	 * Gets the time of the beat
+	 * @return - the time
+	 */
 	public int getTime()
 	{
 		return time;
-		
 	}
 	
-	public int getNote()
+	/**
+	 * Gets the position of the beat
+	 * @return - the position
+	 */
+	public int getPosition()
 	{
-		return note;
-		
+		return position;
 	}
-	
-	
 }
