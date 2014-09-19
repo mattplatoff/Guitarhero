@@ -7,7 +7,7 @@ public class Beat
 	
 	/**
 	 * Default Constructor for Beat
-	 * @param position - position 1, 2 or 3 on the guitar
+	 * @param position - position 1 - 6 on the guitar
 	 * @param time - the time of the beat
 	 */
 	public Beat (int position, int time)
