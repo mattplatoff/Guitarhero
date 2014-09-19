@@ -3,7 +3,7 @@ package processinggame;
 public class Beat 
 {
 	private int time;
-	private int position; //1, 2 or 3 (left, down or right)
+	private int position;
 	
 	/**
 	 * Default Constructor for Beat
@@ -31,5 +31,21 @@ public class Beat
 	public int getPosition()
 	{
 		return position;
+	}
+
+	/**
+	 *  Sets the time of the beat
+	 * @param time - a time stamp
+	 */
+	public void setTime(int time) {
+		this.time = time;
+	}
+
+	/**
+	 * Sets the position of the beat
+	 * @param position - position on guitar
+	 */
+	public void setPosition(int position) {
+		this.position = position;
 	}
 }

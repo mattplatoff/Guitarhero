@@ -9,7 +9,7 @@ public class BeatHandler
 	/**
 	 * Gets notes from a text file and writes them to beats 
 	 */
-	public void createBeats() 
+	public void createBeats()
 	{
 		
 	}
