@@ -9,7 +9,7 @@ import java.io.File;
 - Accesses and mutates beat state (position on the gui)
  *
  */
-public class BeatHandler 
+public class BeatHandler
 {
 	/**
 	 * The method will place beat objects on the guitar
