@@ -5,11 +5,13 @@ public class ScoreKeeper
 {
 	private int score;
 	
-	public ScoreKeeper(){
+	public ScoreKeeper()
+	{
 		score=0;
 	}
 	
-	public void showScore(){
+	public void showScore()
+	{
 		
 	}
 	

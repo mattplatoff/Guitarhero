@@ -7,7 +7,12 @@ package processinggame;
  */
 public class GameState 
 {
-	private String state;
+	/**
+	 * 0 - Menu
+	 * 1 - In Game
+	 * 2 - Paused
+	 */
+	private int state;
 	
 	/**
 	 * 
