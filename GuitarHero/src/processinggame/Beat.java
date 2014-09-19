@@ -7,11 +7,13 @@ public class Beat
 	
 	public int getTime()
 	{
+		return time;
 		
 	}
 	
 	public int getNote()
 	{
+		return note;
 		
 	}
 	
