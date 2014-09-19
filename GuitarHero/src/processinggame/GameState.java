@@ -1,6 +1,6 @@
 package processinggame;
 
-public class Game 
+public class GameState 
 {
 	
 	private GuitarHeroGui gGui;
