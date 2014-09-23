@@ -12,4 +12,9 @@ public class Guitar
 	{
 		
 	}
+	
+	public void keyPressed()
+	{
+		
+	}
 }
