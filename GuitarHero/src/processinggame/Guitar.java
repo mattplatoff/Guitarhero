@@ -3,7 +3,7 @@ package processinggame;
 public class Guitar 
 {
 	/**
-	 * This method will get the key that has been pressed 
+	 * This method will get the key that the guitar has pressed
 	 */
 	public void getKeyPressed()
 	{
