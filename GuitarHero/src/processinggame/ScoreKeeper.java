@@ -23,6 +23,7 @@ public class ScoreKeeper
 	}
 	
 	/**
+	 * this should access the arrayList of beats that will be stored in beat handles rather than taking a new one i believe
 	 * 
 	 */
 	public int updateScore(Beat beatPlayed, ArrayList<Beat> allbeats)

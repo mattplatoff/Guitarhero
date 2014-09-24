@@ -17,14 +17,14 @@ public class BeatHandler
 	 * guitar. 
 	 * 
 	 */
-	public void placeBeatObjects(File beat){
+	public void createBeatObjects(File beat){
 		
 	}
 	
 	/**
-	 * This method will change where the beat is on the gui so it keeps moving down.
+	 * this method will return all the beats in the given song
 	 */
-	public void changeBeatStates(){
+	public ArrayList<Beat> getBeats(){
 		
 	}
 }

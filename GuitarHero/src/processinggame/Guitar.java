@@ -5,14 +5,16 @@ public class Guitar
 	
 	private final key
 	/**
-	 *  Guitar will listen to the keyboard and create and return a beat object based on the keys pressed
-	 *  and the time they have been pressed.
+	 *  called when the spacebar on the guitar is pressed.  returns an araylist with 
+	 *  what keys were checked so that score keeper can compare it to the beats in the score zone to deternine points.
 	 */
-	public Beat playNote()
+	public Beat playNotes()
 	{
 		
 	}
-	
+	/**
+	 * checks if a given key was pressed
+	 */
 	public void keyPressed()
 	{
 		
