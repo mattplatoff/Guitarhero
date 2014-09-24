@@ -15,10 +15,20 @@ public class GameState
 	private int state;
 	
 	/**
-	 * 
+	 * Will change the state
 	 */
-	public void changeState(){
+	public void changeState()
+	{
 		
+	}
+	
+	/**
+	 * Will return the current game state. GUI uses this to know what to display
+	 * @return
+	 */
+	public int getGameState()
+	{
+		return state;
 	}
 
 }

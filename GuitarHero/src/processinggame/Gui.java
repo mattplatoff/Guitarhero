@@ -1,7 +1,8 @@
 package processinggame;
 
-class Gui 
+public class Gui 
 {
+	
 	public void showBeat(ArrayList<Beat> allBeats)
 	{
 		
