@@ -8,6 +8,12 @@ public class Beat
 	/**
 	 * Default Constructor for Beat
 	 * @param position - position 1 - 6 on the guitar
+	 * 1 - left
+	 * 2 - right
+	 * 3 - center
+	 * 4 - left and center
+	 * 5 - center and right
+	 * 6 - left center and right
 	 * @param time - the time of the beat
 	 */
 	public Beat (int position, int time)
@@ -37,7 +43,8 @@ public class Beat
 	 *  Sets the time of the beat
 	 * @param time - a time stamp
 	 */
-	public void setTime(int time) {
+	public void setTime(int time) 
+	{
 		this.time = time;
 	}
 
@@ -45,7 +52,8 @@ public class Beat
 	 * Sets the position of the beat
 	 * @param position - position on guitar
 	 */
-	public void setPosition(int position) {
+	public void setPosition(int position) 
+	{
 		this.position = position;
 	}
 }
