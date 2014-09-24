@@ -1,5 +1,8 @@
 package processinggame;
 
+/**
+ * A Beat is a line of all notes
+ */
 public class Beat 
 {
 	private int time;
