@@ -22,26 +22,3 @@ public class BeatHandler
 		return null;
 	}
 }
-
-
-
-/**
- * !Old code! I didnt want to delete it, so i commented it out here
- */
-///**
-//* The method will place beat objects on the gui
-//* @param beat This is the file that will tell beat handler where and when to put the beat objects on 
-//* guitar. 
-//* 
-//*/
-//public void createBeatObjects(File beats){
-//	
-//}
-//
-///**
-//* this method will return all the beats in the given song
-//*/
-//public ArrayList<Beat> getBeats(File beats){
-//	
-//}
-//}

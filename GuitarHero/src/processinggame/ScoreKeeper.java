@@ -4,14 +4,13 @@ import java.io.File;
 import java.util.ArrayList;
 
 /**
- * 
- * @author 167564
- *
+ * ScoreKeeper is the class which has the job of keeping a running score as well as checking the beat played by the guitar
+ * and the beat in the song to see if they match
  */
 public class ScoreKeeper 
 {
 	private int score;
-//	private Guitar guitar;
+	private Guitar guitar;
 	private ArrayList<Beat> masterbeats;
 	
 	public ScoreKeeper()
