@@ -2,6 +2,7 @@ package processinggame;
 
 public class Guitar 
 {
+	private int lastKeyPressed;
 	/**
 	 * This method will get the key that has been pressed 
 	 */
@@ -9,7 +10,12 @@ public class Guitar
 	{
 		
 	}
-	
+	/**
+	 * Sends the input of pressed key to ScoreKeeper. 
+	 */
+	public int sendKey(){
+		return lastKeyPressed;
+	}
 	/**
 	 * OLD CODE
 	 */
