@@ -4,6 +4,8 @@ public class Beat
 {
 	private int time;
 	private int position;
+	private int note;
+	//TODO Create a method, updateBeatPosition()
 	
 	/**
 	 * Default Constructor for Beat
@@ -16,7 +18,7 @@ public class Beat
 	 * 6 - left center and right
 	 * @param time - the time of the beat
 	 */
-	public Beat (int position, int time)
+	public Beat (int position, int time, int note)
 	{
 		
 	}
@@ -49,11 +51,16 @@ public class Beat
 	}
 
 	/**
-	 * Sets the position of the beat
+	 * Sets and updates the position of the beat
 	 * @param position - position on guitar
 	 */
-	public void setPosition(int position) 
+	public void setPosition(int position)
 	{
 		this.position = position;
+	}
+	
+	public void setNote(int note)
+	{
+		this.note = note;
 	}
 }
