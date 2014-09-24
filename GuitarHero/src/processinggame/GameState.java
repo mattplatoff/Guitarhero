@@ -25,7 +25,7 @@ public class GameState
 	
 	/**
 	 * Will return the current game state. GUI uses this to know what to display
-	 * @return
+	 * @return The Game State.
 	 */
 	public int getGameState()
 	{
