@@ -7,11 +7,13 @@ public class Beat
 {
 	private int position;
 	private int note;
+	private int time;
 	//TODO Create a method, updateBeatPosition()
 	
 	/**
 	 * Default Constructor for Beat
 	 * @param note - keys 1 - 6 on the guitar
+	 * @time - the time of the beat
 	 * 1 - left
 	 * 2 - right
 	 * 3 - center
@@ -20,10 +22,11 @@ public class Beat
 	 * 6 - left center and right
 	 * @param position, the vertical position.
 	 */
-	public Beat (int position, int note)
+	public Beat (int position, int note, int time)
 	{
 		this.position = position;
 		this.note = note;
+		this.time = time;
 	}
 	
 	/**
@@ -60,5 +63,21 @@ public class Beat
 	public int getNote()
 	{
 		return note;
+	}
+
+	/**
+	 * Returns the time of the beat
+	 * @return - the time
+	 */
+	public int getTime() {
+		return time;
+	}
+
+	/**
+	 * Sets the time of the beat
+	 * @param time - the time
+	 */
+	public void setTime(int time) {
+		this.time = time;
 	}
 }
