@@ -12,6 +12,7 @@ public class ScoreKeeper
 {
 	private int score;
 	private Guitar guitar;
+	private ArrayList<Beat> masterbeats;
 	
 	public ScoreKeeper()
 	{
@@ -22,9 +23,9 @@ public class ScoreKeeper
 	 * This method will use the method from BeatHandler and will create an ArrayList of beats. It will use these
 	 * beats to compare the beats from the Guitar
 	 */
-	public ArrayList<Beat> createMasterBeats(File beats)
+	public void createMasterBeats(File beats)
 	{
-		return null;
+		
 	}
 	
 	/**
@@ -37,20 +38,23 @@ public class ScoreKeeper
 	
 	/**
 	 * This method will compare the beat that was played from the guitar to the beat in the master list
+	 * This method will also update the score as it compares the beats one by one
 	 * @param beatplayed - the beat that was just played in the guitar
 	 */
-	public void compareBeats(Beat beatplayed)
+	public void compareBeatandUpdateScore(Beat beatplayed)
 	{
 		
 	}
 	
 	/**
-	 * this should access the arrayList of beats that will be stored in beat handles rather than taking a new one i believe
-	 * 
+	 * OLD CODE
 	 */
-	public int updateScore(Beat beatPlayed, ArrayList<Beat> allbeats)
-	{
-		
-	}
-	
+//	/**
+//	 * this should access the arrayList of beats that will be stored in beat handles rather than taking a new one i believe
+//	 * 
+//	 */
+//	public int updateScore(Beat beatPlayed, ArrayList<Beat> allbeats)
+//	{
+//		
+//	}
 }
