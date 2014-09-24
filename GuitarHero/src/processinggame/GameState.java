@@ -16,8 +16,9 @@ public class GameState
 	
 	/**
 	 * Will change the state
+	 * @param someState the desired state to change to.
 	 */
-	public void changeState()
+	public void changeState(int someState)
 	{
 		
 	}

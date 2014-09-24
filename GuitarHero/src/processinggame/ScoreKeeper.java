@@ -22,6 +22,10 @@ public class ScoreKeeper
 	/**
 	 * This method will use the method from BeatHandler and will create an ArrayList of beats. It will use these
 	 * beats to compare the beats from the Guitar
+	 * 
+	 * Steve: How is this method different from createBeatObjects
+	 * in BeatHandler?
+	 * 
 	 */
 	public void createMasterBeats(File beats)
 	{

@@ -20,5 +20,14 @@ public class MusicPlayer
 	{
 		
 	}
+	
+	/**
+	 * Will pause the song.
+	 */
+	public void pauseSong()
+	{
+		
+	}
+	
 
 }
