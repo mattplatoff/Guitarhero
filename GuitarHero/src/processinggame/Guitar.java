@@ -1,22 +1,28 @@
 package processinggame;
 
+/**
+ * The guitar class which gets the input from the keyboard and also send the last pressed key to the other classes
+ */
 public class Guitar 
 {
 	private int lastKeyPressed;
+	
 	/**
 	 * This method will get the key that has been pressed
 	 * @return the key that has been pressed.
 	 */
-	public int getKeyPressed()
+	public void getKeyPressed()
 	{
 		
 	}
+	
 	/**
 	 * Sends the input of pressed key to ScoreKeeper. 
 	 */
 	public int sendKey(){
 		return lastKeyPressed;
 	}
+	
 	/**
 	 * OLD CODE
 	 */
