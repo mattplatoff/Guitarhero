@@ -5,34 +5,25 @@ package processinggame;
  */
 public class Beat 
 {
-	private int time;
 	private int position;
 	private int note;
 	//TODO Create a method, updateBeatPosition()
 	
 	/**
 	 * Default Constructor for Beat
-	 * @param position - position 1 - 6 on the guitar
+	 * @param note - keys 1 - 6 on the guitar
 	 * 1 - left
 	 * 2 - right
 	 * 3 - center
 	 * 4 - left and center
 	 * 5 - center and right
 	 * 6 - left center and right
-	 * @param time - the time of the beat
+	 * @param position, the vertical position.
 	 */
-	public Beat (int position, int time, int note)
+	public Beat (int position, int note)
 	{
-		
-	}
-	
-	/**
-	 * Gets the time of the beat
-	 * @return - the time
-	 */
-	public int getTime()
-	{
-		return time;
+		this.position = position;
+		this.note = note;
 	}
 	
 	/**
@@ -42,15 +33,6 @@ public class Beat
 	public int getPosition()
 	{
 		return position;
-	}
-
-	/**
-	 *  Sets the time of the beat
-	 * @param time - a time stamp
-	 */
-	public void setTime(int time) 
-	{
-		this.time = time;
 	}
 
 	/**
