@@ -44,8 +44,21 @@ public class Beat
 		this.position = position;
 	}
 	
+	/**
+	 * Sets the note of a specific beat
+	 * @param note - the note to set
+	 */
 	public void setNote(int note)
 	{
 		this.note = note;
+	}
+	
+	/**
+	 * Returns the note of the beat so other classes can compare
+	 * @return - the note
+	 */
+	public int getNote()
+	{
+		return note;
 	}
 }
