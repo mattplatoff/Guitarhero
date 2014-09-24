@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class ScoreKeeper 
 {
 	private int score;
-	private Guitar guitar;
+//	private Guitar guitar;
 	private ArrayList<Beat> masterbeats;
 	
 	public ScoreKeeper()
