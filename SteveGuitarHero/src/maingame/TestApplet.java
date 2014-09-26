@@ -1,17 +1,14 @@
 package maingame;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.net.URL;
 
 import processing.core.PApplet;
 
-public class blah extends PApplet{
+public class TestApplet extends PApplet{
 	
-	static final String PATH = "song1.txt";
-	
-//	public static void main(String[] args)
-//	{
-//		BeatHandler.getMasterBeatsNoParent(PATH);
-//	}
+	static final String PATH =
+			"/home/steve/Programming/repositories/Guitarhero/SteveGuitarHero/musicTextFiles/song1.txt";
 	
 	public void setup()
 	{

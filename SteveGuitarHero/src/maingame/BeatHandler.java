@@ -60,12 +60,10 @@ public class BeatHandler {
 		{
 			while(reader != null && (line = reader.readLine()) != null)
 			{
-//				String[] parts = line.split("\\s");
-//				masterBeats.add(new Beat(Integer.parseInt(parts[0]),
-//						Integer.parseInt(parts[1]),
-//						Integer.parseInt(parts[0])));
-				
-				System.out.println(line);
+				String[] parts = line.split("\\s");
+				masterBeats.add(new Beat(Integer.parseInt(parts[0]),
+						Integer.parseInt(parts[1]),
+						Integer.parseInt(parts[0])));
 			}
 		}
 		catch (IOException e)
