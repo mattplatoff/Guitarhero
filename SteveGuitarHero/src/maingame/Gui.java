@@ -13,15 +13,13 @@ public class Gui extends PApplet {
 	private static final String PATH =
 			"/home/steve/Programming/repositories/Guitarhero/SteveGuitarHero/musicTextFiles/song1.txt";
 	
-	//private ScoreKeeper keeper;
-	//File song = new File("musicTextFiles/song1");
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
+	private ScoreKeeper keeper = new ScoreKeeper(this);
 	
 	public void setup()
 	{
-//		System.out.println(song.exists());
 		size(500, 500);
-		frameRate(30);
+		frameRate(60);
 		masterBeats = BeatHandler.getMasterBeatsWithParent(this, PATH);
 		for (Beat beat : masterBeats)
 		{
@@ -32,21 +30,26 @@ public class Gui extends PApplet {
 	public void draw()
 	{
 		background(170);
+		keeper.draw();
+		line(0, 400, 500, 400);
 		
-		for (Beat b : masterBeats)
+		for(int i = masterBeats.size() - 1; i >= 0; i--)
 		{
+			Beat b = masterBeats.get(i);
 			b.draw();
+			if(b.getPosition() > 400)
+				masterBeats.remove(i);
 		}
 	}
 	
-//	public void mouseClicked()
-//	{
-//		
-//	}
-//	
-//	public void keyPressed()
-//	{
-//		
-//	}
-
+	public void keyPressed()
+	{
+		if(masterBeats.size() != 0)
+		{
+			if(key == CODED)
+			{
+				keeper.updateScore(keyCode, masterBeats.get(masterBeats.size() - 1));
+			}
+		}
+	}
 }

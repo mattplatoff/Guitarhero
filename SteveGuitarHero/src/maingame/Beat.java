@@ -55,7 +55,7 @@ public class Beat {
 			break;
 		}
 		
-		this.incrementPosition(2);
+		this.incrementPosition(1);
 	}
 	
 	public void setParent(PApplet parent)
