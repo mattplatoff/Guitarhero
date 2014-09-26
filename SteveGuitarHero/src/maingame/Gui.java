@@ -16,8 +16,7 @@ public class Gui extends PApplet {
 //		System.out.println(song.exists());
 		size(500, 500);
 		frameRate(30);
-		BeatHandler bh = new BeatHandler(this);
-		masterBeats = bh.getMasterBeats("musicTextFiles/song1");
+		masterBeats = BeatHandler.getMasterBeatsWithParent(this, "musicTextFiles/song1.txt");
 	}
 	
 	public void draw()

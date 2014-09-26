@@ -5,22 +5,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
 
 import processing.core.PApplet;
 
 public class BeatHandler {
 	
-	private PApplet myParent;
-	
-	public BeatHandler(PApplet parent) {
-		
-		this.myParent = parent;
-		
-	}
-	
 	@SuppressWarnings("resource")
-	public static ArrayList<Beat> getMasterBeats(String path)
+	public static ArrayList<Beat> getMasterBeatsNoParent(String path)
 	{
 		File musicTextFile = new File(path);
 		ArrayList<Beat> masterBeats = new ArrayList<Beat>();
@@ -47,6 +40,33 @@ public class BeatHandler {
 				System.out.println(line);
 			}
 			bReader.close();
+		}
+		catch (IOException e)
+		{
+			System.out.println(e.getMessage() + "Error Reading File");
+		}
+		
+		return masterBeats;
+	}
+	
+	public static ArrayList<Beat> getMasterBeatsWithParent(PApplet parent, String path)
+	{
+		ArrayList<Beat> masterBeats = new ArrayList<Beat>();
+		BufferedReader reader = parent.createReader(path);
+		
+		String line = null;
+		
+		try
+		{
+			while(reader != null && (line = reader.readLine()) != null)
+			{
+//				String[] parts = line.split("\\s");
+//				masterBeats.add(new Beat(Integer.parseInt(parts[0]),
+//						Integer.parseInt(parts[1]),
+//						Integer.parseInt(parts[0])));
+				
+				System.out.println(line);
+			}
 		}
 		catch (IOException e)
 		{
