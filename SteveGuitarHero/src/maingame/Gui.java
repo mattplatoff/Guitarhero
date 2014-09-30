@@ -11,7 +11,7 @@ public class Gui extends PApplet {
 	 * Change this path variable to the absolute path of the text file on your computer
 	 * or else it doesn't work for some reason. I'm gonna ask Mr. Horn for some help on this. */
 	private static final String PATH =
-			"/home/steve/Programming/repositories/Guitarhero/SteveGuitarHero/musicTextFiles/song1.txt";
+			"C:/Users/Chiru/Desktop/song1.txt";
 	
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
 	private ScoreKeeper keeper = new ScoreKeeper(this);

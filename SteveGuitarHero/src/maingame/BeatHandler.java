@@ -7,13 +7,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import processing.core.PApplet;
 
 public class BeatHandler {
 	
 	@SuppressWarnings("resource")
-	public static ArrayList<Beat> getMasterBeatsNoParent(String path)
+	public static ArrayList<Beat> getMasterBeatsNoParent(String path) throws IOException
 	{
 		File musicTextFile = new File(path);
 		ArrayList<Beat> masterBeats = new ArrayList<Beat>();
@@ -28,23 +29,16 @@ public class BeatHandler {
 			System.out.println("File Not Found ");
 		} 
 		String line;
-		try
+		while(bReader != null && (line = bReader.readLine()) != null)
 		{
-			while(bReader != null && (line = bReader.readLine()) != null)
-			{
 //				String[] parts = line.split("\\s");
 //				masterBeats.add(new Beat(Integer.parseInt(parts[0]),
 //						Integer.parseInt(parts[1]),
 //						Integer.parseInt(parts[0])));
-				
-				System.out.println(line);
-			}
-			bReader.close();
+			
+			System.out.println(line);
 		}
-		catch (IOException e)
-		{
-			System.out.println(e.getMessage() + "Error Reading File");
-		}
+		bReader.close();
 		
 		return masterBeats;
 	}
