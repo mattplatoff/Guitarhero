@@ -3,6 +3,9 @@ package maingame;
 import java.io.File;
 import java.util.ArrayList;
 
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
 import processing.core.PApplet;
 
 public class Gui extends PApplet {
@@ -10,8 +13,7 @@ public class Gui extends PApplet {
 	/* NOTE -------------------------------------- NOTE
 	 * Change this path variable to the absolute path of the text file on your computer
 	 * or else it doesn't work for some reason. I'm gonna ask Mr. Horn for some help on this. */
-	private static final String PATH =
-			"/home/steve/Programming/repositories/Guitarhero/SteveGuitarHero/musicTextFiles/song1.txt";
+	private static String PATH = null;
 	
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
 	private ScoreKeeper keeper = new ScoreKeeper(this);
@@ -20,10 +22,24 @@ public class Gui extends PApplet {
 	{
 		size(500, 500);
 		frameRate(60);
-		masterBeats = BeatHandler.getMasterBeatsWithParent(this, PATH);
-		for (Beat beat : masterBeats)
+		
+		selectInput("Select a file to process: ", "fileSelected");
+	}
+	
+	public void fileSelected(File fileSelected)
+	{
+		if (fileSelected == null)
 		{
-			beat.setParent(this);
+		    println("Window was closed or the user hit cancel.");
+		}
+		else
+		{
+			PATH = fileSelected.getAbsolutePath();
+			masterBeats = BeatHandler.getMasterBeatsWithParent(this, PATH);
+			for (Beat beat : masterBeats)
+			{
+				beat.setParent(this);
+			}
 		}
 	}
 	
