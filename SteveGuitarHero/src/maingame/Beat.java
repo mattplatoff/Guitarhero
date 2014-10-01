@@ -1,5 +1,7 @@
 package maingame;
 
+import java.awt.Color;
+
 import processing.core.PApplet;
 
 public class Beat {
@@ -12,6 +14,9 @@ public class Beat {
 	private static final int RIGHTCENTER = 5;
 	private static final int LEFTRIGHT = 6;
 	private static final int LEFTRIGHTCENTER = 7;
+	private static Color LEFT_COLOR = new Color(255, 0, 103);
+	private static Color CENTER_COLOR = new Color(0, 177, 177);
+	private static Color RIGHT_COLOR = new Color(176, 241, 0);
 	
 	private int yPos;
 	private int note;
@@ -40,15 +45,15 @@ public class Beat {
 	{
 		switch (this.note) {
 		case 1:
-			myParent.fill(255, 0, 0);
+			myParent.fill(LEFT_COLOR.getRed(), LEFT_COLOR.getGreen(), LEFT_COLOR.getBlue());
 			myParent.ellipse(40, yPos, 20, 20);
 			break;
 		case 2:
-			myParent.fill(0, 255, 0);
+			myParent.fill(CENTER_COLOR.getRed(), CENTER_COLOR.getGreen(), CENTER_COLOR.getBlue());
 			myParent.ellipse(100, yPos, 20, 20);
 			break;
 		case 3:
-			myParent.fill(0, 0, 255);
+			myParent.fill(RIGHT_COLOR.getRed(), RIGHT_COLOR.getGreen(), RIGHT_COLOR.getBlue());
 			myParent.ellipse(160, yPos, 20, 20);
 			break;
 		default:

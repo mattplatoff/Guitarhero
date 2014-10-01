@@ -45,7 +45,7 @@ public class Gui extends PApplet {
 	
 	public void draw()
 	{
-		background(170);
+		this.background(255, 158, 38);
 		keeper.draw();
 		line(0, 400, 500, 400);
 		
