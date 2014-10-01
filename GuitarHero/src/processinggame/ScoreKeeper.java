@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class ScoreKeeper 
 {
 	private int score;
-	private Guitar guitar;
 	private ArrayList<Beat> masterbeats;
 	
 	public ScoreKeeper()
@@ -44,7 +43,7 @@ public class ScoreKeeper
 	 * This method will also update the score as it compares the beats one by one
 	 * @param beatplayed - the beat that was just played in the guitar
 	 */
-	public void compareBeatandUpdateScore(Beat beatplayed)
+	public void compareBeatandUpdateScore(Beat beatplayed, Guitar guitar)
 	{
 		
 	}
