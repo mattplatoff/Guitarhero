@@ -19,6 +19,7 @@ public class MusicPlayer {
 	  input = minim.getLineIn();
 	}
 
+	//test
 	void draw(){ }
 
 	void mousePressed()
