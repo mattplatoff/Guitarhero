@@ -3,31 +3,31 @@ package maingame;
 import ddf.minim.*;
 import processing.core.PApplet;
 
-public class MusicPlayer {
+public class MusicPlayer extends PApplet {
 	
 	Minim minim;
 	AudioPlayer player;
 	AudioInput input;
 
-	void setup()
+	public void setup()
 	{
 	  //let's make the window a little bigger
 	  size(400,400);
 
 	  minim = new Minim(this);
-	  player = minim.loadFile("song.mp3");
+	  player = minim.loadFile("H:\\git\\Guitarhero\\SteveGuitarHero\\Resources\\Vitamin String Quartet- Through The Fire And Flames (Dragonforce).mp3");
 	  input = minim.getLineIn();
 	}
 
 	//test test
-	void draw(){ }
+	public void draw(){ }
 
-	void mousePressed()
+	public void mousePressed()
 	{
 	  player.play();
 	}
 
-	void mouseReleased()
+	public void mouseReleased()
 	{
 	  player.close();
 
