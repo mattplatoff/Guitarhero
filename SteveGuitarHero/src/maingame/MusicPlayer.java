@@ -15,7 +15,7 @@ public class MusicPlayer extends PApplet {
 	  size(400,400);
 
 	  minim = new Minim(null);
-	  player = minim.loadFile("");
+	  player = minim.loadFile("../..//Resources//test.mp3");
 	  input = minim.getLineIn();
 	}
 
