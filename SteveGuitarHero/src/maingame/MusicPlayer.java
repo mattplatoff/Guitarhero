@@ -12,14 +12,13 @@ public class MusicPlayer {
 	void setup()
 	{
 	  //let's make the window a little bigger
-	  size(400,400);
+	  size(400, 400);
 
 	  minim = new Minim(this);
 	  player = minim.loadFile("song.mp3");
 	  input = minim.getLineIn();
 	}
 
-	//test test
 	void draw(){ }
 
 	void mousePressed()
