@@ -15,11 +15,10 @@ public class MusicPlayer extends PApplet {
 	  size(400,400);
 
 	  minim = new Minim(null);
-	  player = minim.loadFile("H:\\git\\Guitarhero\\SteveGuitarHero\\Resources\\Vitamin String Quartet- Through The Fire And Flames (Dragonforce).mp3");
+	  player = minim.loadFile("");
 	  input = minim.getLineIn();
 	}
 
-	//test test
 	public void draw(){ }
 
 	public void mousePressed()
