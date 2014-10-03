@@ -35,13 +35,13 @@ public class MusicPlayer extends PApplet {
 		  }
 	}
 
-//	public void mousePressed()
-//	{
-//	  player.pause();
-//	}
-//
-//	public void mouseReleased()
-//	{
-//	  player.pause();
-//	}
+	public void mousePressed()
+	{
+	  player.pause();
+	}
+
+	public void mouseReleased()
+	{
+	  player.play();
+	}
 }
