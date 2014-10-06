@@ -27,7 +27,7 @@ public class ScoreKeeper {
 	public int updateScore(int keyCode, Beat firstBeat)
 	{
 		if( ((keyCode == parent.LEFT && firstBeat.getNote() == 1) ||
-				(keyCode == parent.CENTER && firstBeat.getNote() == 2) ||
+				(keyCode == parent.DOWN && firstBeat.getNote() == 2) ||
 				(keyCode == parent.RIGHT && firstBeat.getNote() == 3)) &&
 				Math.abs(400 - firstBeat.getPosition()) < 50 )
 		{
