@@ -1,4 +1,4 @@
-package maingame;
+package src.maingame;
 
 import java.io.File;
 import java.util.ArrayList;
