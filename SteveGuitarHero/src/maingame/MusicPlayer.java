@@ -19,8 +19,8 @@ public class MusicPlayer extends PApplet {
 
 	public void draw()
 	{ 
-		background(0);
-		stroke(255);
+		background(255, 204, 0);
+		stroke(255, 10, 205);
 		  
 		  // draw the waveforms
 		  // the values returned by left.get() and right.get() will be between -1 and 1,
