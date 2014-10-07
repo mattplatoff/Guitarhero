@@ -10,7 +10,7 @@ public class MusicPlayer extends PApplet {
 
 	public void setup()
 	{
-	  size(512, 200);
+//	  size(512, 200);
 
 	  minim = new Minim(this);
 	  player = minim.loadFile("../../Resources/test.mp3");
