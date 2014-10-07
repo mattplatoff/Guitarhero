@@ -24,21 +24,24 @@ public class ScoreKeeper {
 		parent.text("Score: " + this.getScore(), 300, 50);
 	}
 	
-	public int updateScore(int keyCode, Beat firstBeat)
+	public boolean updateScore(int keyCode, Beat firstBeat)
 	{
+		boolean hitBeat = false;
 		if( ((keyCode == parent.LEFT && firstBeat.getNote() == 1) ||
-				(keyCode == parent.CENTER && firstBeat.getNote() == 2) ||
+				(keyCode == parent.DOWN && firstBeat.getNote() == 2) ||
 				(keyCode == parent.RIGHT && firstBeat.getNote() == 3)) &&
 				Math.abs(400 - firstBeat.getPosition()) < 50 )
 		{
 			this.score += 100;
+			hitBeat = true;
 		}
 		else
 		{
 			this.score -= 10;
+			hitBeat = false;
 		}
 		
-		return score;
+		return hitBeat;
 	}
 	
 }
