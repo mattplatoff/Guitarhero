@@ -10,7 +10,7 @@ public class MusicPlayer extends PApplet {
 
 	public void setup()
 	{
-	  size(400,400);
+	  size(512, 200);
 
 	  minim = new Minim(this);
 	  player = minim.loadFile("../../Resources/test.mp3");
@@ -19,8 +19,8 @@ public class MusicPlayer extends PApplet {
 
 	public void draw()
 	{ 
-		background(0);
-		stroke(255);
+		background(0, 255, 255);
+		stroke(0);
 		  
 		  // draw the waveforms
 		  // the values returned by left.get() and right.get() will be between -1 and 1,
