@@ -15,7 +15,6 @@ public class MusicPlayer  {
 		this.parent=parent;
 		minim = new Minim(parent);
 		player = minim.loadFile(path);
-	
 	}
 	
 

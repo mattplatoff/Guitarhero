@@ -24,9 +24,8 @@ public class Gui extends PApplet {
 	private MusicPlayer mp=null;
 
 	public void setup() {
+		selectInput("Select a file to process: ", "fileSelected");
 		selectInput("select a song to play", "songSelected");
-		//selectInput("Select a file to process: ", "fileSelected");
-		mp.startMusic();
 		size(500, 500);
 		frameRate(60);
 
@@ -53,6 +52,8 @@ public class Gui extends PApplet {
 				beat.setParent(this);
 			}
 		}
+		
+		mp.startMusic();
 	}
 
 	public void draw() {
