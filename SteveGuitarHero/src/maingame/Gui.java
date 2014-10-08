@@ -76,8 +76,8 @@ public class Gui extends PApplet {
 		{
 			if(key == CODED)
 			{
-				boolean beatHit = keeper.updateScore(keyCode, masterBeats.get(masterBeats.size() - 1));
-				if (beatHit)
+				boolean keyHit = keeper.updateScore(keyCode, masterBeats.get(masterBeats.size() - 1));
+				if (keyHit)
 					masterBeats.remove(masterBeats.size() - 1);
 
 			}
