@@ -67,11 +67,19 @@ public class Gui extends PApplet {
 		}
 	}
 
-	public void keyPressed() {
-		if (masterBeats.size() != 0) {
-			if (key == CODED) {
-				keeper.updateScore(keyCode,
-						masterBeats.get(masterBeats.size() - 1));
+
+	
+	
+	public void keyPressed()
+	{
+		if(masterBeats.size() != 0)
+		{
+			if(key == CODED)
+			{
+				boolean beatHit = keeper.updateScore(keyCode, masterBeats.get(masterBeats.size() - 1));
+				if (beatHit)
+					masterBeats.remove(masterBeats.size() - 1);
+
 			}
 		}
 	}
