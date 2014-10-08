@@ -58,7 +58,7 @@ public class Gui extends PApplet
 	public void draw() {
 		this.background(0);
 		keeper.draw();
-		color(255);
+		stroke(255);
 		line(0, 400, 500, 400);
 
 		for (int i = masterBeats.size() - 1; i >= 0; i--) {
