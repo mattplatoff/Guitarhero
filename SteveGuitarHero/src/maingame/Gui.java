@@ -83,7 +83,9 @@ public class Gui extends PApplet
 		}
 		
 		if((key == 'p' || key== 'P') && frameRate!=0)
-			frameRate(0);
+			frameRate(1);
 		
+		if(key == 'q')
+			frameRate(60);
 	}
 }
