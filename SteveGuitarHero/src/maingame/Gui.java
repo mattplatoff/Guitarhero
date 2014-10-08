@@ -21,11 +21,11 @@ public class Gui extends PApplet {
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
 	private ScoreKeeper keeper = new ScoreKeeper(this);
 	private String songPath;
-	private MusicPlayer mp;
+	private MusicPlayer mp=null;
 
 	public void setup() {
 		selectInput("select a song to play", "songSelected");
-		//selectInput("Select a file to process: ", "fileSelected");
+		selectInput("Select a file to process: ", "fileSelected");
 		size(500, 500);
 		frameRate(60);
 
@@ -39,7 +39,7 @@ public class Gui extends PApplet {
 		songPath = song.getAbsolutePath();
 		
 		mp=new MusicPlayer(songPath);
-		mp.startMusic();}
+		}
 	}
 
 	public void fileSelected(File fileSelected) {
