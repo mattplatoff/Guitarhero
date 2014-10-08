@@ -24,7 +24,8 @@ public class Gui extends PApplet
 	private String songPath;
 	private MusicPlayer mp=null;
 
-	public void setup() {
+	public void setup() 
+	{
 		selectInput("Select a file to process: ", "fileSelected");
 		selectInput("select a song to play", "songSelected");
 		size(500, 500);
@@ -55,8 +56,9 @@ public class Gui extends PApplet
 	}
 
 	public void draw() {
-		this.background(255, 158, 38);
+		this.background(0);
 		keeper.draw();
+		color(255);
 		line(0, 400, 500, 400);
 
 		for (int i = masterBeats.size() - 1; i >= 0; i--) {
