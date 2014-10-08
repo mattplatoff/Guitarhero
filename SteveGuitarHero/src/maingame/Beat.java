@@ -4,7 +4,8 @@ import java.awt.Color;
 
 import processing.core.PApplet;
 
-public class Beat {
+public class Beat 
+{
 	
 	//NOTES
 	private static final int LEFT = 1;

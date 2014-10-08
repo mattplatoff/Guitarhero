@@ -7,8 +7,9 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 import processing.core.PApplet;
-//test
-public class Gui extends PApplet {
+
+public class Gui extends PApplet 
+{
  
 	/*
 	 * NOTE -------------------------------------- NOTE Change this path
@@ -28,7 +29,6 @@ public class Gui extends PApplet {
 		selectInput("select a song to play", "songSelected");
 		size(500, 500);
 		frameRate(60);
-
 	}
 
 	public void songSelected(File song) {
@@ -37,7 +37,6 @@ public class Gui extends PApplet {
 		} else{
 
 		songPath = song.getAbsolutePath();
-		
 		mp=new MusicPlayer(songPath,this);
 		}
 	}
@@ -52,7 +51,6 @@ public class Gui extends PApplet {
 				beat.setParent(this);
 			}
 		}
-		
 		mp.startMusic();
 	}
 
@@ -70,9 +68,6 @@ public class Gui extends PApplet {
 		
 	}
 
-
-	
-	
 	public void keyPressed()
 	{
 		if(masterBeats.size() != 0)
@@ -82,7 +77,6 @@ public class Gui extends PApplet {
 				boolean keyHit = keeper.updateScore(keyCode, masterBeats.get(masterBeats.size() - 1));
 				if (keyHit)
 					masterBeats.remove(masterBeats.size() - 1);
-
 			}
 		}
 	}
