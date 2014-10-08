@@ -81,5 +81,9 @@ public class Gui extends PApplet
 					masterBeats.remove(masterBeats.size() - 1);
 			}
 		}
+		
+		if((key == 'p' || key== 'P') && frameRate!=0)
+			frameRate(0);
+		
 	}
 }
