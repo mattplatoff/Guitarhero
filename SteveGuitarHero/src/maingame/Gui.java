@@ -18,7 +18,7 @@ public class Gui extends PApplet
 	 * this.
 	 */
 	private static String PATH = null;
-
+	private static boolean pause;
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
 	private ScoreKeeper keeper = new ScoreKeeper(this);
 	private String songPath;
@@ -30,6 +30,7 @@ public class Gui extends PApplet
 		selectInput("select a song to play", "songSelected");
 		size(500, 500);
 		frameRate(60);
+		pause=false;
 	}
 
 	public void songSelected(File song) {
@@ -72,7 +73,7 @@ public class Gui extends PApplet
 
 	public void keyPressed()
 	{
-		if(masterBeats.size() != 0)
+		if(masterBeats.size() != 0 && !pause)
 		{
 			if(key == CODED)
 			{
@@ -83,9 +84,13 @@ public class Gui extends PApplet
 		}
 		
 		if((key == 'p' || key== 'P') && frameRate!=0)
-			frameRate(1);
+			pause=true;
 		
 		if(key == 'q')
-			frameRate(60);
+			pause=false;
+	}
+	
+	public static boolean pauseState(){
+		return pause;
 	}
 }

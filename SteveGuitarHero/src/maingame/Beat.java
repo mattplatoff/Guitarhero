@@ -101,6 +101,7 @@ public class Beat
 	
 	public void incrementPosition(int increment)
 	{
+		if(!Gui.pauseState())
 		this.yPos += increment;
 	}
 	
