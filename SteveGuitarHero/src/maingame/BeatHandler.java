@@ -31,12 +31,7 @@ public class BeatHandler {
 		try
 		{
 			while(bReader != null && (line = bReader.readLine()) != null)
-			{
-//				String[] parts = line.split("\\s");
-//				masterBeats.add(new Beat(Integer.parseInt(parts[0]),
-//						Integer.parseInt(parts[1]),
-//						Integer.parseInt(parts[0])));
-				
+			{	
 				System.out.println(line);
 			}
 			bReader.close();
@@ -73,10 +68,4 @@ public class BeatHandler {
 		
 		return masterBeats;
 	}
-	
-//	public static void main(String[] args)
-//	{
-//		getMasterBeats("musicTextFiles/song1");
-//	}
-	
 }
