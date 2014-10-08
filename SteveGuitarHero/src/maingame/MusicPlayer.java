@@ -9,13 +9,13 @@ public class MusicPlayer  {
 	
 	Minim minim;
 	AudioPlayer player;
+	PApplet parent;
 
-
-	public MusicPlayer(String path){
-		
-		minim = new Minim(this);
+	public MusicPlayer(String path,PApplet parent){
+		this.parent=parent;
+		minim = new Minim(parent);
 		player = minim.loadFile(path);
-		player.play();
+	
 	}
 	
 

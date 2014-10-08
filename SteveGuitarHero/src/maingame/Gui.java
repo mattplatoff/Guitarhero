@@ -25,7 +25,8 @@ public class Gui extends PApplet {
 
 	public void setup() {
 		selectInput("select a song to play", "songSelected");
-		selectInput("Select a file to process: ", "fileSelected");
+		//selectInput("Select a file to process: ", "fileSelected");
+		mp.startMusic();
 		size(500, 500);
 		frameRate(60);
 
@@ -38,7 +39,7 @@ public class Gui extends PApplet {
 
 		songPath = song.getAbsolutePath();
 		
-		mp=new MusicPlayer(songPath);
+		mp=new MusicPlayer(songPath,this);
 		}
 	}
 
@@ -65,6 +66,7 @@ public class Gui extends PApplet {
 			if (b.getPosition() > 400)
 				masterBeats.remove(i);
 		}
+		
 	}
 
 
