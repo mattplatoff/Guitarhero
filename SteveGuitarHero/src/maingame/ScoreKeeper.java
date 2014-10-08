@@ -1,5 +1,6 @@
 package maingame;
 
+import maingame.Beat;
 import processing.core.PApplet;
 
 public class ScoreKeeper {
