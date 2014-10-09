@@ -9,7 +9,7 @@ public class MusicPlayer
 {
 	
 	Minim minim;
-	AudioPlayer player;
+	private static AudioPlayer player;
 	PApplet parent;
 
 	public MusicPlayer(String path,PApplet parent)
@@ -20,12 +20,12 @@ public class MusicPlayer
 	}
 	
 
-	public void startMusic()
+	public static void startMusic()
 	{
 		player.play();
 	}
 	
-	public void pauseMusic()
+	public static void pauseMusic()
 	{
 	  player.pause();
 	}

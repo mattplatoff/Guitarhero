@@ -83,11 +83,15 @@ public class Gui extends PApplet
 			}
 		}
 		
-		if((key == 'p' || key== 'P') && frameRate!=0)
+		if((key == 'p' || key== 'P') && frameRate!=0){
 			pause=true;
+			MusicPlayer.pauseMusic();
+		}
 		
-		if(key == 'q')
+		if(key == 'q'){
 			pause=false;
+			MusicPlayer.startMusic();
+		}
 	}
 	
 	public static boolean pauseState(){
