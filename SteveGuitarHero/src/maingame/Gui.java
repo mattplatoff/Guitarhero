@@ -23,6 +23,7 @@ public class Gui extends PApplet
 	private ScoreKeeper keeper = new ScoreKeeper(this);
 	private String songPath;
 	private MusicPlayer mp=null;
+	private ArrayList<Integer> keys = new ArrayList<Integer>();
 
 	public void setup() 
 	{
