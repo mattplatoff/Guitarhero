@@ -11,12 +11,7 @@ import processing.core.PApplet;
 public class Gui extends PApplet 
 {
  
-	/*
-	 * NOTE -------------------------------------- NOTE Change this path
-	 * variable to the absolute path of the text file on your computer or else
-	 * it doesn't work for some reason. I'm gonna ask Mr. Horn for some help on
-	 * this.
-	 */
+	
 	private static String PATH = null;
 	private static boolean pause;
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
@@ -31,6 +26,7 @@ public class Gui extends PApplet
 		size(500, 500);
 		frameRate(60);
 		pause=false;
+
 	}
 
 	public void songSelected(File song) {

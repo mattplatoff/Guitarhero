@@ -29,6 +29,23 @@ public class MusicPlayer
 	{
 	  player.pause();
 	}
-
+	public void generateTextFile(){
+		
+		double adv;
+		char arrow;
+		for(int i = 0; i < player.bufferSize() - 1; i++)
+			
+		  {
+			adv=(player.left.get(i)+player.right.get(i))/2;
+			if (adv<-.33)
+				arrow='l';
+				else if (adv<.33)
+					arrow='m';
+					else 
+						arrow='r';
+				
+		  }
+		
+	}
 	
 }
