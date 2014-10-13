@@ -18,6 +18,7 @@ public class Gui extends PApplet
 	private ScoreKeeper keeper = new ScoreKeeper(this);
 	private String songPath;
 	private MusicPlayer mp=null;
+	private ArrayList<Integer> keys = new ArrayList<Integer>();
 
 	public void setup() 
 	{
@@ -79,12 +80,12 @@ public class Gui extends PApplet
 			}
 		}
 		
-		if((key == 'p' || key== 'P') && frameRate!=0){
+		if((key == 'p' || key== 'P') && !pause){
 			pause=true;
 			MusicPlayer.pauseMusic();
 		}
-		
-		if(key == 'q'){
+		else
+		if(key == 'p' && pause){
 			pause=false;
 			MusicPlayer.startMusic();
 		}
