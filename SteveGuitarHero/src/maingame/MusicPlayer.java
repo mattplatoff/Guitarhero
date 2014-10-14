@@ -37,7 +37,7 @@ public class MusicPlayer {
 		for (int i = 0; i < player.bufferSize() - 1; i+=1000)
 		{
 			ct = System.currentTimeMillis() - time;
-			adv = (player.left.get(i) + player.right.get(i)) / 2;
+			adv = player.left.get(i);
 			if (adv < -.9) {
 				arrow = 1;
 				writer.println(ct + " " + arrow);
