@@ -1,6 +1,7 @@
 package maingame;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.JFileChooser;
@@ -27,6 +28,12 @@ public class Gui extends PApplet
 		size(500, 500);
 		frameRate(60);
 		pause=false;
+		try {
+			mp.generateTextFile("H:\\git\\Guitarhero\\SteveGuitarHero\\Music\\song1.txt");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
