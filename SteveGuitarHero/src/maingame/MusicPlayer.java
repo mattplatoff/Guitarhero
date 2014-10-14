@@ -34,14 +34,14 @@ public class MusicPlayer {
 		long ct;
 		int arrow;
 		PrintWriter writer = new PrintWriter(path, "UTF-8");
-		for (int i = 0; i < player.bufferSize() - 1; i++)
+		for (int i = 0; i < player.bufferSize() - 1; i+=1000)
 		{
 			ct = System.currentTimeMillis() - time;
 			adv = (player.left.get(i) + player.right.get(i)) / 2;
-			if (adv < -.7) {
+			if (adv < -.9) {
 				arrow = 1;
 				writer.println(ct + " " + arrow);
-			} else if (adv < .7) {
+			} else if (adv > .9) {
 				arrow = 2;
 				writer.println(ct + " " + arrow);
 			} else if (adv > -.1 && adv < .1) {
@@ -50,7 +50,7 @@ public class MusicPlayer {
 			}
 
 		}
-
+writer.close();
 	}
 
 }
