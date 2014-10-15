@@ -50,7 +50,7 @@ public class MusicPlayer {
 			}
 
 		}
-writer.close();
+		writer.close();
 	}
 
 }
