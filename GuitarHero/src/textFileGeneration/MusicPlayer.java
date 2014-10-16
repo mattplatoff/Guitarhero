@@ -1,4 +1,4 @@
-package maingame;
+package textFileGeneration;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -11,7 +11,7 @@ import processing.core.PApplet;
 public class MusicPlayer {
 
 	Minim minim;
-	private static AudioPlayer player;
+	private AudioPlayer player;
 	PApplet parent;
 
 	public MusicPlayer(String path, PApplet parent) {
@@ -20,11 +20,11 @@ public class MusicPlayer {
 		player = minim.loadFile(path);
 	}
 
-	public static void startMusic() {
+	public void startMusic() {
 		player.play();
 	}
 
-	public static void pauseMusic() {
+	public void pauseMusic() {
 		player.pause();
 	}
 
@@ -51,12 +51,14 @@ public class MusicPlayer {
 //
 //		}
 //		writer.close();
-		int i = 0;
-		while(i < player.bufferSize() - 1)
-		{
-			System.out.println(player.right.get(i));
-			i += 1000;
-		}
+//		int i = 0;
+//		while(i < player.bufferSize() - 1)
+//		{
+//			System.out.println(player.right.get(i));
+//			i += 1000000;
+//		}
+		
+		System.out.println("length: " + player.length());
 	}
 	
 	public AudioPlayer getPlayer()
