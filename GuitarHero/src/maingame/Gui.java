@@ -5,6 +5,14 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import org.jfugue.Player;
+
+import ddf.minim.AudioOutput;
+import ddf.minim.Minim;
+import ddf.minim.ugens.ADSR;
+import ddf.minim.ugens.Delay;
+import ddf.minim.ugens.Instrument;
+import ddf.minim.ugens.Oscil;
 import processing.core.PApplet;
 
 @SuppressWarnings("serial")
@@ -23,6 +31,8 @@ public class Gui extends PApplet
 	private MusicPlayer mp=null;
 	
 	private String state;
+	private Minim minim;
+	private AudioOutput out;
 
 	@SuppressWarnings("static-access")
 	public void setup()
@@ -35,11 +45,14 @@ public class Gui extends PApplet
 		saveBeats(songTextPath);
 		mp = new MusicPlayer(songPath, this);
 		size(500, 500);
-		frameRate(50);
+		frameRate(70);
 		pause=false;
 		
 		keyboard.close();
 		mp.startMusic();
+		 minim=new Minim(this);
+		 out=minim.getLineOut();
+		out.setTempo(60);
 	}
 
 	public void songSelected(File song) {
@@ -99,6 +112,21 @@ public class Gui extends PApplet
 				if (keyHit)
 					masterBeats.remove(0);
 			}
+			
+		}
+		
+		if(!pause){
+			
+			
+			if(keyCode==RIGHT)
+				out.playNote("A");
+			else
+				if(keyCode==LEFT)
+					out.playNote("C");
+				else
+					if(keyCode==DOWN)
+						out.playNote("G");
+						
 		}
 		
 		if((key == 'p' || key== 'P') && !pause){
@@ -110,7 +138,10 @@ public class Gui extends PApplet
 			pause=false;
 			MusicPlayer.startMusic();
 		}
+		
+		
 	}
+	
 	
 	public static boolean pauseState(){
 		return pause;
