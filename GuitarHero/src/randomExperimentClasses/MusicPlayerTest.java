@@ -1,4 +1,4 @@
-package textFileGeneration;
+package randomExperimentClasses;
 
 import java.io.IOException;
 
@@ -14,16 +14,17 @@ public class MusicPlayerTest extends PApplet{
 	{
 		size(200, 200);
 		mp.startMusic();
-	}
-	
-	public void draw()
-	{
-		background(1, 52, 64);
 		try
 		{
 			mp.generateTextFile("../Music/generationTest.txt");
 		}
 		catch (IOException e) {}
+	}
+	
+	public void draw()
+	{
+		background(1, 52, 64);
+		
 	}
 
 }

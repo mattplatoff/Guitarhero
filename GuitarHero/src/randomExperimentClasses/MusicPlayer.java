@@ -1,4 +1,4 @@
-package textFileGeneration;
+package randomExperimentClasses;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -51,14 +51,18 @@ public class MusicPlayer {
 //
 //		}
 //		writer.close();
-//		int i = 0;
-//		while(i < player.bufferSize() - 1)
-//		{
-//			System.out.println(player.right.get(i));
-//			i += 1000000;
-//		}
+		int i = 0;
+		while(i < player.bufferSize())
+		{
+			float value = player.mix.get(i);
+			if(value > 0)
+				System.out.println(value);
+			i++;
+		}
 		
 		System.out.println("length: " + player.length());
+		System.out.println("last buffer: " + i);
+		System.out.println(player.position());
 	}
 	
 	public AudioPlayer getPlayer()

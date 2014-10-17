@@ -14,11 +14,11 @@ public class Gui extends PApplet
 	private static Color CENTER_COLOR = new Color(0, 177, 177);
 	private static Color RIGHT_COLOR = new Color(176, 241, 0);
 	
-	private static String songTextPath = "../Music/songWriteTest.txt";
+	private static String songTextPath = "../Music/songGeneration.txt";
 	private static boolean pause;
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
 	private ScoreKeeper keeper = new ScoreKeeper(this);
-	private String songPath = "../Music/test.mp3";
+	private String songPath = "../Music/shortjingle.mp3";
 	private MusicPlayer mp=null;
 
 	@SuppressWarnings("static-access")
