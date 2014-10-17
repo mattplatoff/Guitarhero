@@ -5,14 +5,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import org.jfugue.Player;
-
 import ddf.minim.AudioOutput;
 import ddf.minim.Minim;
-import ddf.minim.ugens.ADSR;
-import ddf.minim.ugens.Delay;
-import ddf.minim.ugens.Instrument;
-import ddf.minim.ugens.Oscil;
 import processing.core.PApplet;
 
 @SuppressWarnings("serial")
