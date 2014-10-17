@@ -3,6 +3,7 @@ package maingame;
 import java.awt.Color;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import processing.core.PApplet;
 
@@ -14,23 +15,30 @@ public class Gui extends PApplet
 	private static Color CENTER_COLOR = new Color(0, 177, 177);
 	private static Color RIGHT_COLOR = new Color(176, 241, 0);
 	
-	private static String songTextPath = "../Music/songGeneration.txt";
+	private static String songTextPath = "";
 	private static boolean pause;
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
 	private ScoreKeeper keeper = new ScoreKeeper(this);
-	private String songPath = "../Music/shortjingle.mp3";
+	private String songPath = "";
 	private MusicPlayer mp=null;
+	
+	private String state;
 
 	@SuppressWarnings("static-access")
-	public void setup() 
+	public void setup()
 	{
-//		selectInput("Select a file to process: ", "fileSelected");
-//		selectInput("select a song to play", "songSelected");
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Enter the path of the text file containing beats: ");
+		songTextPath = keyboard.next();
+		System.out.println("Enter the path of the MP3 To play: ");
+		songPath = keyboard.next();
 		saveBeats(songTextPath);
 		mp = new MusicPlayer(songPath, this);
 		size(500, 500);
 		frameRate(50);
 		pause=false;
+		
+		keyboard.close();
 		mp.startMusic();
 	}
 
