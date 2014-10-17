@@ -23,18 +23,20 @@ public class Beat
 	private int note;
 	private int time;
 	private PApplet myParent;
+	private double increment;
 	
-	public Beat(int position, int note, int time)
+	public Beat(int note, int time, double increment)
 	{
-		this.yPos = position;
 		this.note = note;
 		this.time = time;
+		this.yPos = 420 - time;
 		myParent = null;
+		this.increment = increment;
 	}
 	
-	public Beat(PApplet parent, int position, int note, int time)
+	public Beat(PApplet parent, int position, int note, int time, double increment)
 	{
-		this(position, note, time);
+		this(note, time, increment);
 		this.myParent = parent;
 		
 	}
@@ -51,17 +53,17 @@ public class Beat
 			break;
 		case 2:
 			myParent.fill(CENTER_COLOR.getRed(), CENTER_COLOR.getGreen(), CENTER_COLOR.getBlue());
-			myParent.ellipse(100, yPos, 20, 20);
+			myParent.ellipse(140, yPos, 20, 20);
 			break;
 		case 3:
 			myParent.fill(RIGHT_COLOR.getRed(), RIGHT_COLOR.getGreen(), RIGHT_COLOR.getBlue());
-			myParent.ellipse(160, yPos, 20, 20);
+			myParent.ellipse(240, yPos, 20, 20);
 			break;
 		default:
 			break;
 		}
 		
-		this.incrementPosition(1);
+		this.incrementPosition(this.increment);
 	}
 	
 	public void setParent(PApplet parent)
@@ -99,7 +101,7 @@ public class Beat
 		this.note = note;
 	}
 	
-	public void incrementPosition(int increment)
+	public void incrementPosition(double increment)
 	{
 		if(!Gui.pauseState())
 		this.yPos += increment;

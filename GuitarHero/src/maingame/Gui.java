@@ -1,32 +1,37 @@
 package maingame;
 
+import java.awt.Color;
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
 
 import processing.core.PApplet;
 
+@SuppressWarnings("serial")
 public class Gui extends PApplet 
 {
-	private static String PATH = null;
+	
+	private static Color LEFT_COLOR = new Color(255, 0, 103);
+	private static Color CENTER_COLOR = new Color(0, 177, 177);
+	private static Color RIGHT_COLOR = new Color(176, 241, 0);
+	
+	private static String songTextPath = "../Music/songGeneration.txt";
 	private static boolean pause;
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
 	private ScoreKeeper keeper = new ScoreKeeper(this);
-	private String songPath;
+	private String songPath = "../Music/shortjingle.mp3";
 	private MusicPlayer mp=null;
-	private ArrayList<Integer> keys = new ArrayList<Integer>();
 
+	@SuppressWarnings("static-access")
 	public void setup() 
 	{
-		selectInput("Select a file to process: ", "fileSelected");
-		selectInput("select a song to play", "songSelected");
+//		selectInput("Select a file to process: ", "fileSelected");
+//		selectInput("select a song to play", "songSelected");
+		saveBeats(songTextPath);
+		mp = new MusicPlayer(songPath, this);
 		size(500, 500);
-		frameRate(60);
+		frameRate(50);
 		pause=false;
-		
+		mp.startMusic();
 	}
 
 	public void songSelected(File song) {
@@ -39,17 +44,26 @@ public class Gui extends PApplet
 		}
 	}
 
+	@SuppressWarnings("static-access")
 	public void fileSelected(File fileSelected) {
 		if (fileSelected == null) {
 			println("Window was closed or the user hit cancel.");
 		} else {
-			PATH = fileSelected.getAbsolutePath();
-			masterBeats = BeatHandler.getMasterBeatsWithParent(this, PATH);
+			songTextPath = fileSelected.getAbsolutePath();
+			masterBeats = BeatHandler.getMasterBeatsWithParent(this, songTextPath);
 			for (Beat beat : masterBeats) {
 				beat.setParent(this);
 			}
 		}
 		mp.startMusic();
+	}
+	
+	public void saveBeats(String songTextFile)
+	{
+		masterBeats = BeatHandler.getMasterBeatsWithParent(this, songTextPath);
+		for (Beat beat : masterBeats) {
+			beat.setParent(this);
+		}
 	}
 
 	public void draw() {
@@ -73,9 +87,9 @@ public class Gui extends PApplet
 		{
 			if(key == CODED)
 			{
-				boolean keyHit = keeper.updateScore(keyCode, masterBeats.get(masterBeats.size() - 1));
+				boolean keyHit = keeper.updateScore(keyCode, masterBeats.get(0));
 				if (keyHit)
-					masterBeats.remove(masterBeats.size() - 1);
+					masterBeats.remove(0);
 			}
 		}
 		
