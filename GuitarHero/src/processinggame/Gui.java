@@ -47,13 +47,14 @@ public class Gui
 	public static void drawMenu(){
 		
 	}
-	/**
-	 * Shows the pause screen and the buttons for resuming and exiting
-	 */
-	public static drawPause(){
-		
-	}
-	public static drawBeat(int String){
-		
-	}
+//	/**
+//	 * Shows the pause screen and the buttons for resuming and exiting
+//	 */
+//	public static drawPause()
+//	{
+//		
+//	}
+//	public static drawBeat(int String){
+//		
+//	}
 }

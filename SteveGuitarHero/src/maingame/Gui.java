@@ -11,8 +11,6 @@ import processing.core.PApplet;
 
 public class Gui extends PApplet 
 {
- 
-	
 	private static String PATH = null;
 	private static boolean pause;
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();

@@ -30,27 +30,28 @@ public class MusicPlayer {
 
 	public void generateTextFile(String path) throws IOException {
 		long time = System.currentTimeMillis();
-		double adv;
+		double average;
 		long ct;
 		int arrow;
 		PrintWriter writer = new PrintWriter(path, "UTF-8");
 		for (int i = 0; i < player.bufferSize() - 1; i+=1000)
 		{
 			ct = System.currentTimeMillis() - time;
-			adv = (player.left.get(i) + player.right.get(i)) / 2;
-			if (adv < -.9) {
-				arrow = 1;
-				writer.println(ct + " " + arrow);
-			} else if (adv > .9) {
-				arrow = 2;
-				writer.println(ct + " " + arrow);
-			} else if (adv > -.1 && adv < .1) {
-				arrow = 3;
-				writer.println(ct + " " + arrow);
-			}
+			average = player.left.get(i);
+			writer.println(average);
+//			if (average < -.9) {
+//				arrow = 1;
+//				writer.println(ct + " " + arrow);
+//			} else if (average > .9) {
+//				arrow = 2;
+//				writer.println(ct + " " + arrow);
+//			} else if (average > -.1 && average < .1) {
+//				arrow = 3;
+//				writer.println(ct + " " + arrow);
+//			}
 
 		}
-writer.close();
+		writer.close();
 	}
 
 }
