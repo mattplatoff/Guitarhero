@@ -31,6 +31,12 @@ public class Gui extends PApplet
 	private AudioOutput out;
 
 	@SuppressWarnings("static-access")
+	
+	/**
+	 * This sets up the whole project, it puts in a scanner for the keyboard, it also 
+	 * lets the user enter the mp3 to be played and the place to save the beats.
+	 * It also opens a listener that plays notes whenever a player hits a key.
+	 */
 	public void setup()
 	{
 		Scanner keyboard = new Scanner(System.in);
@@ -51,7 +57,11 @@ public class Gui extends PApplet
 		out.setTempo(90);
 		out.setGain(35);
 	}
-
+	
+	/**
+	 * Gets the file path of the mp3.
+	 * @param song The  mp3 file of the song. 
+	 */
 	public void songSelected(File song) {
 		if (song == null) {
 			println("Window was closed or the user hit cancel.");
@@ -61,7 +71,11 @@ public class Gui extends PApplet
 		mp=new MusicPlayer(songPath,this);
 		}
 	}
-
+	
+	/**
+	 * This gets the file path of where the beats are going to be stored.
+	 * @param fileSelected The file where the beats are stored.
+	 */
 	@SuppressWarnings("static-access")
 	public void fileSelected(File fileSelected) {
 		if (fileSelected == null) {
@@ -76,6 +90,10 @@ public class Gui extends PApplet
 		mp.startMusic();
 	}
 	
+	/**
+	 * This creates the beats from the mp3 file  and saves it in a text file. 
+	 * @param songTextFile This is where the textfile is going to be stored.
+	 */
 	public void saveBeats(String songTextFile)
 	{
 		masterBeats = BeatHandler.getMasterBeatsWithParent(this, songTextPath);
@@ -83,7 +101,10 @@ public class Gui extends PApplet
 			beat.setParent(this);
 		}
 	}
-
+	
+	/**
+	 * This draws the beats on the screen and makes them move down the screen.
+	 */
 	public void draw() {
 		this.background(0);
 		keeper.draw();
@@ -98,7 +119,11 @@ public class Gui extends PApplet
 		}
 		
 	}
-
+	
+	/**
+	 * This handles the key presses from the user and updates the score. It also handles pause
+	 * functionality. 
+	 */
 	public void keyPressed()
 	{
 		if(masterBeats.size() != 0 && !pause)
@@ -139,7 +164,10 @@ public class Gui extends PApplet
 		
 	}
 	
-	
+	/**
+	 * If program is paused or not.
+	 * @return The state of the program.
+	 */
 	public static boolean pauseState(){
 		return pause;
 	}
