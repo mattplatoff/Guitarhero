@@ -9,6 +9,10 @@ import ddf.minim.AudioOutput;
 import ddf.minim.Minim;
 import processing.core.PApplet;
 
+/**
+ * This is the master GUI class that also contains the main method. This method calls for the specific files and then
+ * starts the game
+ */
 @SuppressWarnings("serial")
 public class Gui extends PApplet 
 {
