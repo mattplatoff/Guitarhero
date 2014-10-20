@@ -18,14 +18,14 @@ public class Gui extends PApplet
 	private static boolean pause;
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
 	private ScoreKeeper keeper = new ScoreKeeper(this);
-	private String songPath = "../Music/shortjingle.mp3";
+	private String songPath = "../Music/test.mp3";
 	private MusicPlayer mp=null;
 
 	@SuppressWarnings("static-access")
 	public void setup() 
 	{
-//		selectInput("Select a file to process: ", "fileSelected");
-//		selectInput("select a song to play", "songSelected");
+	//selectInput("Select a file to process: ", "fileSelected");
+	//selectInput("select a song to play", "songSelected");
 		saveBeats(songTextPath);
 		mp = new MusicPlayer(songPath, this);
 		size(500, 500);
