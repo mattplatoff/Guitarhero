@@ -10,6 +10,12 @@ import processing.core.PApplet;
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 
+/**
+ * Class that analyzes a specified mp3 file and writes the beats to a file automatically.
+ * Applet also visualizes the music.
+ * @author 167564
+ *
+ */
 @SuppressWarnings("serial")
 public class BeatAnalyzer extends PApplet{
 	Minim minim;
@@ -18,6 +24,10 @@ public class BeatAnalyzer extends PApplet{
 	private String generationTextPath = "";
 	private int counter = 0;
 
+	/**
+	 * Prompts the user for the textfile and the mp3 path.
+	 * Also, plays the music and sets up the fast fourier transform for mp3 visualization and analysis.
+	 */
 	public void setup()
 	{
 	  size(640, 480);
@@ -40,6 +50,11 @@ public class BeatAnalyzer extends PApplet{
 	  player.play();
 	}
 
+	/**
+	 * Draws the bars that represent the amplitude for various frequencies at each instant in the song.
+	 * Also, every 25 frames, this method analyzes 3 groups of frequencies and compares the total
+	 * amplitude of each to determine which beat should be played at that time.
+	 */
 	public void draw()
 	{
 	  counter++;
@@ -98,6 +113,12 @@ public class BeatAnalyzer extends PApplet{
 	  
 	}
 	
+	/**
+	 * Writes the string containing the beats and the time to the specified file path.
+	 * @param pathToGenerationFile The path of the file to be written to.
+	 * @param beatsToPrint The String with the file path to be written to.
+	 * @throws IOException
+	 */
 	public void writeToFile(String pathToGenerationFile, String beatsToPrint) throws IOException
 	{
 		PrintWriter out = null;
