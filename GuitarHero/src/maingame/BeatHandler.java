@@ -57,7 +57,7 @@ public class BeatHandler {
 	 * This method get the master list of beats just like the previous method except it does them with the PApplet
 	 * @param parent - PApplet
 	 * @param path - path of the file
-	 * @return - the arraylist of beatss
+	 * @return - the arraylist of beats
 	 */
 	public static ArrayList<Beat> getMasterBeatsWithParent(PApplet parent, String path)
 	{
