@@ -4,6 +4,11 @@ import java.awt.Color;
 
 import processing.core.PApplet;
 
+/**
+ * Beat is the class that signifies an individual beat. Each beat holds a y Position, time and type of beat.
+ * @author 176148
+ *
+ */
 public class Beat 
 {
 	
