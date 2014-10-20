@@ -21,7 +21,11 @@ public class Gui extends PApplet
 	private static boolean pause;
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
 	private ScoreKeeper keeper = new ScoreKeeper(this);
+<<<<<<< HEAD
+	private String songPath = "../Music/test.mp3";
+=======
 	private String songPath = "";
+>>>>>>> branch 'master' of https://github.com/mattplatoff/Guitarhero.git
 	private MusicPlayer mp=null;
 	
 	private String state;
@@ -31,11 +35,16 @@ public class Gui extends PApplet
 	@SuppressWarnings("static-access")
 	public void setup()
 	{
+<<<<<<< HEAD
+	//selectInput("Select a file to process: ", "fileSelected");
+	//selectInput("select a song to play", "songSelected");
+=======
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Enter the path of the text file containing beats: ");
 		songTextPath = keyboard.next();
 		System.out.println("Enter the path of the MP3 To play: ");
 		songPath = keyboard.next();
+>>>>>>> branch 'master' of https://github.com/mattplatoff/Guitarhero.git
 		saveBeats(songTextPath);
 		mp = new MusicPlayer(songPath, this);
 		size(500, 500);
