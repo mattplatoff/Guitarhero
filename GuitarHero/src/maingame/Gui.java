@@ -3,7 +3,10 @@ package maingame;
 import java.awt.Color;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Scanner;
 
+import ddf.minim.AudioOutput;
+import ddf.minim.Minim;
 import processing.core.PApplet;
 
 @SuppressWarnings("serial")
@@ -14,24 +17,46 @@ public class Gui extends PApplet
 	private static Color CENTER_COLOR = new Color(0, 177, 177);
 	private static Color RIGHT_COLOR = new Color(176, 241, 0);
 	
-	private static String songTextPath = "../Music/songGeneration.txt";
+	private static String songTextPath = "";
 	private static boolean pause;
 	private ArrayList<Beat> masterBeats = new ArrayList<Beat>();
 	private ScoreKeeper keeper = new ScoreKeeper(this);
+<<<<<<< HEAD
 	private String songPath = "../Music/test.mp3";
+=======
+	private String songPath = "";
+>>>>>>> branch 'master' of https://github.com/mattplatoff/Guitarhero.git
 	private MusicPlayer mp=null;
+	
+	private String state;
+	private Minim minim;
+	private AudioOutput out;
 
 	@SuppressWarnings("static-access")
-	public void setup() 
+	public void setup()
 	{
+<<<<<<< HEAD
 	//selectInput("Select a file to process: ", "fileSelected");
 	//selectInput("select a song to play", "songSelected");
+=======
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Enter the path of the text file containing beats: ");
+		songTextPath = keyboard.next();
+		System.out.println("Enter the path of the MP3 To play: ");
+		songPath = keyboard.next();
+>>>>>>> branch 'master' of https://github.com/mattplatoff/Guitarhero.git
 		saveBeats(songTextPath);
 		mp = new MusicPlayer(songPath, this);
 		size(500, 500);
 		frameRate(50);
 		pause=false;
+		
+		keyboard.close();
 		mp.startMusic();
+		 minim=new Minim(this);
+		 out=minim.getLineOut();
+		out.setTempo(90);
+		out.setGain(35);
 	}
 
 	public void songSelected(File song) {
@@ -91,6 +116,21 @@ public class Gui extends PApplet
 				if (keyHit)
 					masterBeats.remove(0);
 			}
+			
+		}
+		
+		if(!pause){
+			
+			
+			if(keyCode==RIGHT)
+				out.playNote("A");
+			else
+				if(keyCode==LEFT)
+					out.playNote("C");
+				else
+					if(keyCode==DOWN)
+						out.playNote("G");
+						
 		}
 		
 		if((key == 'p' || key== 'P') && !pause){
@@ -102,7 +142,10 @@ public class Gui extends PApplet
 			pause=false;
 			MusicPlayer.startMusic();
 		}
+		
+		
 	}
+	
 	
 	public static boolean pauseState(){
 		return pause;

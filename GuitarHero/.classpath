@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="Resources/mp3spi1.9.4.jar"/>
 	<classpathentry kind="lib" path="Resources/tritonus_aos.jar"/>
 	<classpathentry kind="lib" path="Resources/tritonus_share.jar"/>
+	<classpathentry kind="lib" path="Resources/jfugue-4.0.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
