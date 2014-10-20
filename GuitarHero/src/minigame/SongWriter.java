@@ -11,6 +11,11 @@ import maingame.MusicPlayer;
 import processing.core.PApplet;
 
 @SuppressWarnings("serial")
+/**
+ * Class that allows user to write their own beats to a song of their choosing using the keyboard.
+ * @author 167564
+ *
+ */
 public class SongWriter extends PApplet{
 	
 	private MusicPlayer mp;
@@ -20,6 +25,10 @@ public class SongWriter extends PApplet{
 	
 	FFT fft;
 	
+	/**
+	 * Prompts the user for the text file path and mp3 file path. Sets the size of the applet.
+	 * Initializes the fast fourier transform objects for the visualizer.
+	 */
 	@SuppressWarnings("static-access")
 	public void setup() 
 	{
@@ -40,6 +49,10 @@ public class SongWriter extends PApplet{
 		stroke(255);
 	}
 	
+	/**
+	 * Draws the bars corresponding to various frequencies played in the song. Visualizes
+	 * the amplitude of each frequency.
+	 */
 	public void draw()
 	{
 		background(0);
@@ -55,6 +68,10 @@ public class SongWriter extends PApplet{
 		  }
 	}
 	
+	/**
+	 * When user presses the Left, Right, or Down arrow keys, will write the time in milliseconds
+	 * and the note to be played to the specified file.
+	 */
 	public void keyPressed()
 	{
 		if(key == CODED)
@@ -94,6 +111,12 @@ public class SongWriter extends PApplet{
 		
 	}
 	
+	/**
+	 * Writes the specified string containing the time and beat to the specified file.
+	 * @param pathToGenerationFile path to the textfile containing beats.
+	 * @param beatsToPrint String that contains the time in milliseconds and the beat to be played at that time.
+	 * @throws IOException
+	 */
 	public void writeToFile(String pathToGenerationFile, String beatsToPrint) throws IOException
 	{
 		PrintWriter out = null;
