@@ -7,24 +7,37 @@ public class ScoreKeeper {
 	
 	private int score;
 	private PApplet parent;
-	
+	/**
+	 * creates a new score keeper object with a papplet as a parameter
+	 * @param parent the PApplet that the scorekeeper is being created in
+	 */
 	public ScoreKeeper(PApplet parent)
 	{
 		this.score = 0;
 		this.parent = parent;
 	}
-	
+	/**
+	 * returns the current score
+	 * @return score
+	 */
 	public int getScore()
 	{
 		return score;
 	}
-	
+	/**
+	 * draws the score keeper
+	 */
 	public void draw()
 	{
 		parent.textSize(32);
 		parent.text("Score: " + this.getScore(), 300, 50);
 	}
-	
+	/**
+	 * runs continuously to update the score
+	 * @param keyCode the key beign pressed
+	 * @param firstBeat the beat to be player
+	 * @return true if beat is hit
+	 */
 	public boolean updateScore(int keyCode, Beat firstBeat)
 	{
 		boolean hitBeat = false;
