@@ -13,52 +13,35 @@ public class MusicPlayer {
 	Minim minim;
 	private static AudioPlayer player;
 	PApplet parent;
-
+/**
+ * Creates a music player object with a PApplet as a parent and a path to the music file
+ * @param path path to music file
+ * @param parent PApplet the music player is being called it
+ * 
+ */
 	public MusicPlayer(String path, PApplet parent) {
 		this.parent = parent;
 		minim = new Minim(parent);
 		player = minim.loadFile(path);
 	}
-
+/**
+ * Starts the music
+ */
 	public static void startMusic() {
 		player.play();
 	}
-
+/**
+ * pauses music
+ */
 	public static void pauseMusic() {
 		player.pause();
 	}
 
-	public void generateTextFile(String path) throws IOException {
-//		long time = System.currentTimeMillis();
-//		double adv;
-//		long ct;
-//		int arrow;
-//		PrintWriter writer = new PrintWriter(path, "UTF-8");
-//		for (int i = 0; i < player.bufferSize() - 1; i+=1000)
-//		{
-//			ct = System.currentTimeMillis() - time;
-//			adv = player.left.get(i);
-//			if (adv < -.9) {
-//				arrow = 1;
-//				writer.println(ct + " " + arrow);
-//			} else if (adv > .9) {
-//				arrow = 2;
-//				writer.println(ct + " " + arrow);
-//			} else if (adv > -.1 && adv < .1) {
-//				arrow = 3;
-//				writer.println(ct + " " + arrow);
-//			}
-//
-//		}
-//		writer.close();
-		int i = 0;
-		while(i < player.bufferSize() - 1)
-		{
-			System.out.println(player.right.get(i));
-			i += 1000;
-		}
-	}
 	
+	/**
+	 * returns the refrence to the Player object
+	 * @return this player
+	 */
 	public AudioPlayer getPlayer()
 	{
 		return this.player;

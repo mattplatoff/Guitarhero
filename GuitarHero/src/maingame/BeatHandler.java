@@ -10,8 +10,17 @@ import java.util.ArrayList;
 
 import processing.core.PApplet;
 
+/**
+ * The beat handler reads in the beats from a text file. It will read the values and then create an arraylist of beats from
+ * the text file
+ */
 public class BeatHandler {
 	
+	/**
+	 * This method reads a text file of beats, reads the text file and stores the beats into an arraylist of beats
+	 * @param path - the path of the text file
+	 * @return - an arraylist of beats
+	 */
 	@SuppressWarnings("resource")
 	public static ArrayList<Beat> getMasterBeatsNoParent(String path)
 	{
@@ -44,6 +53,12 @@ public class BeatHandler {
 		return masterBeats;
 	}
 	
+	/**
+	 * This method get the master list of beats just like the previous method except it does them with the PApplet
+	 * @param parent - PApplet
+	 * @param path - path of the file
+	 * @return - the arraylist of beats
+	 */
 	public static ArrayList<Beat> getMasterBeatsWithParent(PApplet parent, String path)
 	{
 		ArrayList<Beat> masterBeats = new ArrayList<Beat>();
