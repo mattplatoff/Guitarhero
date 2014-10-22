@@ -39,7 +39,7 @@ public class Gui extends PApplet
 		saveBeats(songTextPath);
 		mp = new MusicPlayer(songPath, this);
 		size(500, 500);
-		frameRate(70);
+		frameRate(50);
 		pause=false;
 		
 		keyboard.close();
