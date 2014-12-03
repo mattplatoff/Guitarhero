@@ -14,7 +14,7 @@ public class Beat
 	private static Color LEFT_COLOR = new Color(255, 0, 103);
 	private static Color CENTER_COLOR = new Color(0, 177, 177);
 	private static Color RIGHT_COLOR = new Color(176, 241, 0);
-	
+	//t1
 	/**
 	 * These private ints will keep track of a beats yPos on the screen, the type of note, the time of each beat
 	 * and the increment value to keep the beat moving constantly. We also need PApplet to draw the beats on the gui
